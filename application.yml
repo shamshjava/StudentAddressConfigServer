@@ -4,3 +4,15 @@ eureka:
       defaultZone: http://${EUREKA_SERVER:localhost}:8761/eureka/
   instance:
     prefer-ip-address: true
+
+spring:
+  application:
+    name: ADDRESS-SERVICE
+  datasource:
+    password: ${MYSQL_PASSWORD:1234}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB_NAME:shamshdb}
+    username: ${MYSQL_USER:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true    
